@@ -7,7 +7,7 @@ export default function PaymentMethodScreen(props) {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
   if (!shippingAddress.address) {
-    props.history.push('/shipping');
+    props.history.push('/shipping'); 
   }
   const [paymentMethod, setPaymentMethod] = useState('PayPal');
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ export default function PaymentMethodScreen(props) {
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></input>
             <label htmlFor="paypal">PayPal</label>
-          </div>
+          </div> 
         </div>
         <div>
           <div>
