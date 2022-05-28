@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import LoadingBox from '../components/LoadingBox';
+import LoadingBox from '../components/LoadingBox'; 
 import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
@@ -40,7 +40,7 @@ export default function UserEditScreen() {
   const { userInfo } = state;
 
   const params = useParams();
-  const { id: userId } = params;
+  const { id: userId } = params; 
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -132,7 +132,7 @@ export default function UserEditScreen() {
           <div className="mb-3">
             <Button disabled={loadingUpdate} type="submit">
               Update
-            </Button>
+            </Button> 
             {loadingUpdate && <LoadingBox></LoadingBox>}
           </div>
         </Form>
