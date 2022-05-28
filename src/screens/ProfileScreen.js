@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Store } from '../Store';
 import { toast } from 'react-toastify';
-import { getError } from '../utils';
+import { getError } from '../utils'; 
 import axios from 'axios';
 
 const reducer = (state, action) => {
@@ -31,7 +31,7 @@ export default function ProfileScreen() {
 
   const [{ loadingUpdate }, dispatch] = useReducer(reducer, {
     loadingUpdate: false,
-  });
+  }); 
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -98,7 +98,7 @@ export default function ProfileScreen() {
             type="password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-        </Form.Group>
+        </Form.Group> 
         <div className="mb-3">
           <Button type="submit">Update</Button>
         </div>
