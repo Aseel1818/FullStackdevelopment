@@ -34,7 +34,7 @@ function App() {
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
-            </Link>
+            </Link> 
             {userInfo ? (
               <div className="dropdown">
                 <Link to="#">
@@ -61,5 +61,5 @@ function App() {
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
-        </main>
+        </main> 
         <footer className="row center">All right reserved</footer>
