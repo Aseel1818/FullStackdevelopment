@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import Container from 'react-bootstrap/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroup from 'react-bootstrap/ListGroup'; 
 import Form from 'react-bootstrap/Form';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
@@ -126,7 +126,7 @@ export default function ProductEditScreen() {
     const bodyFormData = new FormData();
     bodyFormData.append('file', file);
     try {
-      dispatch({ type: 'UPLOAD_REQUEST' });
+      dispatch({ type: 'UPLOAD_REQUEST' }); 
       const { data } = await axios.post('/api/upload', bodyFormData, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -220,7 +220,7 @@ export default function ProductEditScreen() {
           </Form.Group>
           <Form.Group className="mb-3" controlId="additionalImageFile">
             <Form.Label>Upload Aditional Image</Form.Label>
-            <Form.Control
+            <Form.Control 
               type="file"
               onChange={(e) => uploadFileHandler(e, true)}
             />
@@ -257,7 +257,7 @@ export default function ProductEditScreen() {
               Update
             </Button>
             {loadingUpdate && <LoadingBox></LoadingBox>}
-          </div>
+          </div> 
         </Form>
       )}
     </Container>
