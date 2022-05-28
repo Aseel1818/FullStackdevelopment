@@ -4,5 +4,4 @@ app.use('/api/products', productRouter);
 import dotenv from 'dotenv';
 dotenv.config();
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
+app.use(express.urlencoded({ extended: true })); 
