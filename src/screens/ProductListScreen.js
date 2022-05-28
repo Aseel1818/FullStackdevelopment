@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { toast } from 'react-toastify';
-import { Store } from '../Store';
+import { Store } from '../Store'; 
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
@@ -13,7 +13,7 @@ import { getError } from '../utils';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
-      return { ...state, loading: true };
+      return { ...state, loading: true }; 
     case 'FETCH_SUCCESS':
       return {
         ...state,
@@ -24,7 +24,7 @@ const reducer = (state, action) => {
       };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
-    case 'CREATE_REQUEST':
+    case 'CREATE_REQUEST': 
       return { ...state, loadingCreate: true };
     case 'CREATE_SUCCESS':
       return {
@@ -186,7 +186,7 @@ export default function ProductListScreen() {
                     >
                       Edit
                     </Button>
-                    &nbsp;
+                    &nbsp; 
                     <Button
                       type="button"
                       variant="light"
@@ -208,7 +208,7 @@ export default function ProductListScreen() {
               >
                 {x + 1}
               </Link>
-            ))}
+            ))} 
           </div>
         </>
       )}
