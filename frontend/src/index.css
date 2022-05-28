@@ -3,20 +3,26 @@
   max-width: 60rem;
   margin: 0 auto;
 }
+
 .form > div {
   display: flex;
   flex-direction: column;
   margin: 1rem;
 }
+
 .form label {
   margin: 1rem 0;
   display: block;
 }
+
+
 /* Dropdown */
+
 .dropdown {
   display: inline-block;
   position: relative;
 }
+
 .dropdown-content {
   position: absolute;
   display: none;
@@ -29,14 +35,18 @@
   margin-top: 0.4rem;
   border-radius: 0.5rem;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .loading {
   display: block !important;
 }
 
+
 /* Checkout Steps */
+
 .checkout-steps > div {
   border-top: 0.3rem #c0c0c0 solid;
   color: #c0c0c0;
@@ -44,6 +54,7 @@
   padding: 1rem;
   font-weight: bold;
 }
+
 .checkout-steps > div.active {
   border-top-color: #f08000;
   color: #f08000;
