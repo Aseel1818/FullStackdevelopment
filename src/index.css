@@ -1,222 +1,125 @@
-
-
-html{
-
-
-  font-size: 62.5%; /* 16px  x 62.5 = 10px = 1 rem */
-  box-sizing:border-box;
-}
-
-body{
-
-  margin: 0;
-  height: 100vh;
-  font-size: 1.6rem;
-  font-family:  Arial, Helvetica, sans-serif;
+body {
+  margin: 20px 20px;
+  font-family: Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#root{
-
-  height: 100%;
+.site-container {
+  min-height: 100vh;
 }
-
-
-
-
-
-
-/* Layout */
-.grid-container{
-  display: grid;
-  grid-template-areas: 
-  'header'
-  'main'
-  'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
-  height: 100%;
+main {
+  flex: 1;
 }
-
-
-header{
-grid-area: header;
-background-color: blanchedalmond;
-}
-
-main{
-  grid-area: main;
-  padding: 1rem;
-}
-
-footer{
-  grid-area: footer;
-  background-color: blanchedalmond;
-  color: black;
-}
-
-/* common */
-
-h1{
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
-
-h2{
-
-  font-size: 1.6rem;
-  padding: 1rem 0; 
-}
-
-a{
-
-  text-decoration: none;
-}
-
-a:hover{
-  color: orange;
-}
-
-ul{
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
- 
-}
-
-li{
-  /*vertical space between items*/
-  margin-top: 1rem;
-}
-
-button{
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 0.1rem grey solid;
-  font-size: 1.6rem;
-  font-family:  Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(225, 225, 225);
-  cursor: pointer;
-}
-button:hover{
-  border: 0.1rem  #404040 solid;
-}
-
-
-button.primary{
+.btn-primary,
+.btn-outline-primary {
   background-color: #f0c040;
+  color: #000000;
 }
-
-button.block{
-  width: 100%;
-}
-
-/* Headers */
-
-header  a{
-
-  color: black;
-  padding: 1rem;
-}
-
-
-a.brand{
-
-  color: black;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-
-.row{
-
+.products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-
-.row.center{
-
   justify-content: center;
 }
 
-.row.top{
-  align-items:flex-start ;
+.rating span {
+  color: #0f7a1d;
 }
 
-.col-1{
-  flex:1 1 25rem;
-}
-
-.col-2{
-  flex:2 1 50rem;
-}
-
-/* Image */ 
-
-img{
-
-  border-radius: 0.5rem;
-  border-color: transparent;
-  
-}
-
-img.medium{
-max-width: 29rem;
-width: 100%;
-}
-
-img.large{
-  width: 40%;
-}
-
-/* Card */ 
-
-.card{
-
-  border: 0.1rem  yellow solid;
-  background-color: wheat;
-  border-radius: 0.5rem;
+.product {
+  border: 1px #404040 solid;
   margin: 1rem;
 }
-
-
-.card-body{
-padding: 1rem;
-
+.product img {
+  width: 100%;
+  max-width: 400px;
+}
+.product-info {
+  padding: 1rem;
+}
+.img-large {
+  max-width: 100%;
+}
+.img-thumbnail {
+  height: 80px;
+}
+.small-container {
+  max-width: 600px;
 }
 
-.card-body > * {
-
-  margin-bottom: 0.5rem;
+.checkout-steps > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #f08000;
+  color: #f08000;
 }
 
-.price{
-  font-size: 2rem;
+/* sidebar */
+.navbar-brand {
+  font-weight: none;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
 }
 
-.rating span{
-
-  color: #f0c040;
-  margin: 0.1rem;
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
+.text-bold {
+  font-weight: bold;
 }
 
-.rating span:last-child{
-  color: black;
+/* Map */
+
+.full-box {
+  height: 100vh;
+  max-width: initial;
+}
+.full-box header,
+.full-box footer {
+  display: none;
+}
+.full-box .container {
+  height: 100vh;
+  max-width: initial;
+  margin: 0;
+  padding: 0;
 }
 
-/* Alert */
-
-.success{
-  color: #20a020;
+.full-box .mt-3 {
+  margin-top: 0 !important;
 }
 
-.error{
-  color: red;
+.map-input-box {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0.5rem auto;
+  width: 25rem;
+  height: 3rem;
+  display: flex;
+}
+.map-input-box input {
+  border-radius: 1rem 0 0 1rem;
+  border-right: 0;
+}
+.map-input-box button {
+  border-radius: 0 1rem 1rem 0;
+  border-left: 0;
+}
+button.thumbnail {
+  padding: 0;
 }

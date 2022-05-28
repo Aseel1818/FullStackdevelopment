@@ -1,97 +1,76 @@
-const data={
-    products:[
-        {
+import bcrypt from 'bcryptjs';
 
-        _id:'1',
-        name:'The king of Drugs',
-        category:'Fantesy',
-        Image:'/images/p1.jpg',
-        price:10,
-        countInStock:10,
-        author:'James',
-        rating:1,
-        numReviews:10,
-        description:'ujhfurjeherhrehurehgureh',
-
-    },
-
+const data = {
+  users: [
     {
-
-        _id:'2',
-        name:'Kathleen Brooks ',
-        category:'Fantesy',
-        Image:'/images/p2.jpg',
-        price:17,
-        countInStock:20,
-        author:'Kathleen',
-        rating:2,
-        numReviews:10,
-        description:'ujhfurjeherhrehurehgureh',
-
+      name: 'Cool-gang',
+      email: 'cool@hotmail.com',
+      password: bcrypt.hashSync('123'),
+      isAdmin: true,
     },
-
     {
-
-        _id:'3',
-        name:'Imagenery friend',
-        category:'Fantesy',
-        Image:'/images/p3.jpg',
-        price:16,
-        countInStock:0,
-        author:'Zein',
-        rating:3,
-        numReviews:10,
-        description:'ujhfurjeherhrehurehgureh',
-
+      name: 'Cool',
+      email: 'user@hotmail.com',
+      password: bcrypt.hashSync('123'),
+      isAdmin: false,
     },
-
+  ],
+  products: [
     {
-
-        _id:'4',
-        name:'Stephan king',
-        category:'Fantesy',
-        Image:'/images/p4.jpg',
-        price:22,
-        countInStock:12,
-        author:'Jony',
-        rating:2,
-        numReviews:10,
-        description:'ujhfurjeherhrehurehgureh',
-
+      name: 'ايكادو',
+      slug: 'ايكادو',
+      category: 'New book',
+      image: '/images/p1.jpg', // 679px × 829px
+      price: 120,
+      countInStock: 1,
+     
+      rating: 4.5,
+      numReviews: 10,
+      description:
+        'سعف النخيل يظلل الأفق من بعيد وكأنّه سحاب أخضر. صيحة غريبة صمّت أذنيه ثُمّ شعر فجأة بمخالب تقبض على كتفيه، فرفع بصره ورأى طائرًا عملاقًا يبسط جناحيه مظللًا فوق رأسه، تسارعت أنفاسه وهو يطير على ارتفاعٍ شاهق فوق وادٍ عميق يقطعه نهر ماؤه رقراق زمرّدي اللون! لاحت من بعيد أكواخٌ صغيرة لكنّها متقاربة مصفوفة بانتظام في مجاميع يفصل بينها ممرّات أرضها مغطاة بزهور صغيرة صفراء. تناهى إلى سمعه صوت أنثوي ناعم، كان يناديه ويكرر كلمة غريبة لم يدرك كنهها! "إيكادولي....إيكادولي"',
     },
-
     {
-
-        _id:'5',
-        name:'Hollow Woods',
-        category:'Fantesy',
-        Image:'/images/p5.jpg',
-        price:7,
-        countInStock:2,
-        author:'Zein',
-        rating:4,
-        numReviews:10,
-        description:'ujhfurjeherhrehurehgureh',
-
+     
+      name: 'كويكول',
+      slug: 'كويكول',
+      category: 'Old book',
+      image: '/images/p2.jpg',
+      price: 250,
+      countInStock: 0,
+      
+      rating: 4.0,
+      numReviews: 10,
+      description:
+        'مرحبًا أيّها المُحارب؛ هل سافرت معنا لثلاث رحلاتٍ محلِّقًا على جناح صَقْرٍ إلى مملكة البلاغة؟ إن كُنت قد فعلتها حقًا فهلُمّ لرحلة رابعة، أقبل بِحَفْنَةٍ من الخيال، فتلك وثيقة السّفر، ثُمّ تهيّأ لقفزة بين دفّتي الكتاب الّذي بين يديك، وستنبت لك في الحال أجنحة عجيبة، لنبدأ التحليق معًا في رحاب سماء مملكة البلاغة، حيث سنبني قُصُورًا لتسكنها أرواحنا الحائرة بحثًا عن نفحات السَّعَادَة وبصيص من الأمل. قد تظنّ الأمر ضربًا من الخيال، لكنّنا في الحقيقة نعيش في رحاب مملكة البلاغة كلّ يوم، فأنت “أنس” عندما تُحب بشرف، وأنتِ “مرام” في ثباتك على الحقّ، وكلّنا “كلودة” يا صديقي! ما زالت الصّقور تفتّش عن المحاربين، فلدينا الكثير من الأسرار الّتي لم تُكشف بعد، لا تفزع إن أضاءت السّماء بالبروق المتوالية، سيكون زلزالاً شديداً ، فهناك خطب جليل، وأحبابنا في خطر!”',
     },
-
     {
-
-        _id:'6',
-        name:'Hate Midnight',
-        category:'Fantesy',
-        Image:'/images/p6.jpeg',
-        price:15,
-        countInStock:3,
-        author:'Katleen',
-        rating:5,
-        numReviews:10,
-        description:'ujhfurjeherhrehurehgureh',
-
+     
+      name: 'ابق قوياً',
+      slug: 'ابق قوياً',
+      category: 'New book',
+      image: '/images/p3.jpg',
+      price: 25,
+      countInStock: 1,
+      
+      rating: 4.5,
+      numReviews: 14,
+      description:
+        'هو مزيج بين التنمية و السيرة الذاتية، و هو عبارة عن مذكرات تكتب بشكل مستمر لـمدة سنة أي 365 يوم، تحتوي مذكرات ديمي على اقتباسات من كتب، كلمات خاصة، نصائح، اقتراحات، تأملات، أهداف يومية و خواطر. الكاتبة تشارك المعجبين مشاعرها و مشاكلها الشخصية، أملاً منها في مساعدتهم و منحهم القوة و الالهام، و طبعاً نجحت في هذه المهمة بشكل كبير. يجب أن نتجاوز ثقافة الصمت و الخوف من الحديث عن بعض المشاكل و المواضيع، نحن في عالم مفتوح و لسنا في أقفاص. الأروع في الكتاب أن ديمي تشارك الآخرين ما تعلمته من هذه الحياة باسلوب بسيط، حميمي و قريب من القلوب. هذا الكتاب لجميع الأعمار لكنه يناسب بشكل خاص المراهقين و الشباب - الكثير منهم لا يجد أحداً يفهمه - و أجده مثالي للأشخاص الذين يشعرون بالملل من المطالعة. لأن أسلوبه سهل و لا توجد قصة بأحداث بل فقط مذكرات يومية ملهمة',
     },
-
-    ],
-
+    {
+      
+      name: 'سقطرى',
+      slug: 'سقطرى',
+      category: 'Old book',
+      image: '/images/p4.jpg',
+      price: 65,
+      countInStock: 2,
+     
+      rating: 4.5,
+      numReviews: 10,
+      description:
+        'رواية سقطرى pdf بقلم حنان لاشين .. لماذا تشعر الآن و كأنها عجوز علي الرغم من كونها في الواحد و العشرين من عمرها! تناهى إلى مسامعها صوت خطوات تقترب، اعتدلت في جلستها و تواثبت دقات قلبها و هي تشرد نحو الباب، و كلما اقتربت تلك الخطوات من باب غرفتها كانت دقات قلبها تتسارع بوتيرة اكبر، تأرجحت الثريا المعلقة في السقف بجنون، ارتعشت الإضاءة و كأنها ستخفت، ثم اشتدت و غمرت المكان بقوة من جديد و كأن يداً خفية تتلاعب بها، طرق احدهم على الباب ثلاث طرقات بقوة، ثم انتظر قليلاً و أعاد الطرق مرة اخرى بتصميم شديد عندما لم تجبه، كانت ترجو من الله ان ينصرف هذا الطارق، فهي تخشى ان ينفرط عقد لسانها و تبوح بكل شيء، فتح الباب ببطء و كان له أزيز مخيف، ودلف ضيفها، و اقترب و عيناه تشعان شغفاً و فضولاً، و جلس في سكون ينتظر منها ان تبوح بكل الأسرار، ظلت تحدق إلى وجهه حتى ظن أنها لن تتكلم، و أخيرًا ازدردت ريقها، و عادت بذاكرتها لعشر سنوات مضت، و بدأت تخرج ما بجعبتها من أسرار.',
+    },
+  ],
 };
-
 export default data;
