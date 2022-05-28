@@ -30,7 +30,7 @@ const reducer = (state, action) => {
         successDelete: true,
       };
     case 'DELETE_FAIL':
-      return { ...state, loadingDelete: false };
+      return { ...state, loadingDelete: false }; 
     case 'DELETE_RESET':
       return { ...state, loadingDelete: false, successDelete: false };
     default:
@@ -53,7 +53,7 @@ export default function OrderListScreen() {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(`/api/orders`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
-        });
+        }); 
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
       } catch (err) {
         dispatch({
