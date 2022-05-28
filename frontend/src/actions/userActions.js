@@ -29,9 +29,9 @@ export const register = (name, email, password) => async (dispatch) => {
           : error.message,
     });
   }
-};
+}; 
 
-export const signin = (email, password) => async (dispatch) => {
+export const signin = (email, password) => async (dispatch) => { 
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
   try {
 @@ -22,6 +47,7 @@ export const signin = (email, password) => async (dispatch) => {
