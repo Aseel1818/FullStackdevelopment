@@ -1,5 +1,6 @@
 import bcrypt from 'bcryptjs';
 import { generateToken } from '../utils.js';
+
 userRouter.post(
   '/signin',
   expressAsyncHandler(async (req, res) => {
@@ -19,6 +20,7 @@ userRouter.post(
     res.status(401).send({ message: 'Invalid email or password' });
   })
 );
+
 userRouter.post(
   '/register',
   expressAsyncHandler(async (req, res) => {
@@ -37,4 +39,5 @@ userRouter.post(
     });
   })
 );
+
 export default userRouter;
