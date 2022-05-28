@@ -1,19 +1,15 @@
 html{
-
-
     font-size: 62.5%; /* 16px  x 62.5 = 10px = 1 rem */
     box-sizing:border-box;
 }
 
 body{
-
     margin: 0;
     height: 100vh;
     font-size: 1.6rem;
     font-family:  Arial, Helvetica, sans-serif;
 
 }
-
 
 /* Layout */
 .grid-container{
@@ -44,6 +40,7 @@ footer{
     color: black;
 }
 
+
 /* common */
 
 h1{
@@ -66,6 +63,7 @@ a:hover{
     color: orange;
 }
 
+
 /* Headers */
 
 header  a{
@@ -74,14 +72,12 @@ header  a{
     padding: 1rem;
 }
 
-
 a.brand{
 
     color: black;
     font-size: 3rem;
     font-weight: bold;
 }
-
 
 .row{
 
@@ -101,7 +97,6 @@ a.brand{
 /* Image */ 
 
 img{
-
     border-radius: 0.5rem;
 }
 
@@ -121,14 +116,12 @@ width: 100%;
     margin: 1rem;
 }
 
-
 .card-body{
 padding: 1rem;
 
 }
 
 .card-body > * {
-
     margin-bottom: 0.5rem;
 }
 
@@ -137,7 +130,6 @@ padding: 1rem;
 }
 
 .rating span{
-
     color: #f0c040;
     margin: 0.1rem;
 }
