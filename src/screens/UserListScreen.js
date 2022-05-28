@@ -55,8 +55,9 @@ export default function UserListScreen() {
         const { data } = await axios.get(`/api/users`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
+        
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
-      } catch (err) {
+      } catch (err) { 
         dispatch({
           type: 'FETCH_FAIL',
           payload: getError(err),
@@ -87,6 +88,7 @@ export default function UserListScreen() {
       }
     }
   };
+  
   return (
     <div>
       <Helmet>
@@ -110,6 +112,7 @@ export default function UserListScreen() {
               <th>ACTIONS</th>
             </tr>
           </thead>
+        
           <tbody>
             {users.map((user) => (
               <tr key={user._id}>
