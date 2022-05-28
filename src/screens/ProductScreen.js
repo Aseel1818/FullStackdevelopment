@@ -20,7 +20,7 @@ import { toast } from 'react-toastify';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'REFRESH_PRODUCT':
-      return { ...state, product: action.payload };
+      return { ...state, product: action.payload }; 
     case 'CREATE_REQUEST':
       return { ...state, loadingCreateReview: true };
     case 'CREATE_SUCCESS':
@@ -47,7 +47,7 @@ function ProductScreen() {
 
   const navigate = useNavigate();
   const params = useParams();
-  const { slug } = params;
+  const { slug } = params; 
 
   const [{ loading, error, product, loadingCreateReview }, dispatch] =
     useReducer(reducer, {
@@ -275,6 +275,6 @@ function ProductScreen() {
         </div>
       </div>
     </div>
-  );
+  ); 
 }
 export default ProductScreen;
