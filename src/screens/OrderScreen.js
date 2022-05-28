@@ -10,7 +10,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import MessageBox from '../components/MessageBox'; 
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
@@ -83,7 +83,7 @@ export default function OrderScreen() {
         purchase_units: [
           {
             amount: { value: order.totalPrice },
-          },
+          }, 
         ],
       })
       .then((orderID) => {
