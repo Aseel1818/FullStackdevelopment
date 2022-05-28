@@ -1,6 +1,6 @@
 import express from 'express';
 import multer from 'multer';
-import { v2 as cloudinary } from 'cloudinary';
+import { v2 as cloudinary } from 'cloudinary'; 
 import streamifier from 'streamifier';
 import { isAdmin, isAuth } from '../utils.js';
 
@@ -32,7 +32,7 @@ uploadRouter.post(
       });
     };
     const result = await streamUpload(req);
-    res.send(result);
+    res.send(result); 
   }
 );
 export default uploadRouter;
