@@ -6,13 +6,13 @@ import CheckoutSteps from '../components/CheckoutSteps';
 export default function ShippingAddressScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart); 
   const { shippingAddress } = cart;
   if (!userInfo) {
     props.history.push('/signin');
   }
   const [fullName, setFullName] = useState(shippingAddress.fullName);
-  const [address, setAddress] = useState(shippingAddress.address);
+  const [address, setAddress] = useState(shippingAddress.address); 
   const [city, setCity] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
   const [country, setCountry] = useState(shippingAddress.country);
@@ -43,7 +43,7 @@ export default function ShippingAddressScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="address">Address</label>
+          <label htmlFor="address">Address</label> 
           <input
             type="text"
             id="address"
@@ -72,7 +72,7 @@ export default function ShippingAddressScreen(props) {
             placeholder="Enter postal code"
             value={postalCode}
             onChange={(e) => setPostalCode(e.target.value)}
-            required
+            required 
           ></input>
         </div>
         <div>
