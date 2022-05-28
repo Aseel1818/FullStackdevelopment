@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { Helmet } from 'react-helmet-async';
 import { useContext, useEffect, useState } from 'react';
 import { Store } from '../Store';
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'; 
 import { getError } from '../utils';
 
 export default function SigninScreen() {
@@ -62,7 +62,7 @@ export default function SigninScreen() {
             type="password"
             required
             onChange={(e) => setPassword(e.target.value)}
-          />
+          /> 
         </Form.Group>
         <div className="mb-3">
           <Button type="submit">Sign In</Button>
