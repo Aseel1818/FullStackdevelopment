@@ -24,7 +24,7 @@ const reducer = (state, action) => {
     default:
       return state;
   }
-};
+}; 
 
 export default function PlaceOrderScreen() {
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ export default function PlaceOrderScreen() {
       ctxDispatch({ type: 'CART_CLEAR' });
       dispatch({ type: 'CREATE_SUCCESS' });
       localStorage.removeItem('cartItems');
-      navigate(`/order/${data.order._id}`);
+      navigate(`/order/${data.order._id}`); 
     } catch (err) {
       dispatch({ type: 'CREATE_FAIL' });
       toast.error(getError(err));
@@ -127,7 +127,7 @@ export default function PlaceOrderScreen() {
                           className="img-fluid rounded img-thumbnail"
                         ></img>{' '}
                         <Link to={`/product/${item.slug}`}>{item.name}</Link>
-                      </Col>
+                      </Col> 
                       <Col md={3}>
                         <span>{item.quantity}</span>
                       </Col>
