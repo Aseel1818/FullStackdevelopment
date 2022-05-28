@@ -5,14 +5,6 @@ const async = require("hbs/lib/async");
 const express = require("express");
 const dotenv=require("dotenv");
 
-    
-
-
-
-
-
-
-
 const db= mysql.createConnection({
 
     host: process.env.DATABASE_HOST,
@@ -84,12 +76,6 @@ else{
 
 }
 
-
-
-
-
-
-
 exports.login = async (req, res, next) => {
   const { email, password,verify } = req.body;
 
@@ -127,20 +113,7 @@ exports.login = async (req, res, next) => {
       }
     });
   }
-          
-        
-        
-        
-      
-    
-      
   
-
-  
-
-
-
-
 // Only for rendered pages, no errors!
 exports.isLoggedIn = async (req, res, next) => {
   console.log(req.cookies);
@@ -174,9 +147,6 @@ exports.isLoggedIn = async (req, res, next) => {
     next();
   }
 };
-
-
-
 
 exports.logout = (req,res) => {
   res.clearCookie('jwt');
