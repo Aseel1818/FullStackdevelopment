@@ -20,6 +20,7 @@ const initialState = {
       : [],
   },
 };
+
 function reducer(state, action) {
   switch (action.type) {
     case 'SET_FULLBOX_ON':
@@ -79,7 +80,7 @@ function reducer(state, action) {
             ...state.cart.shippingAddress,
             location: action.payload,
           },
-        },
+        }, 
       };
 
     case 'SAVE_PAYMENT_METHOD':
