@@ -1,7 +1,6 @@
 const express=require("express");
 const authController = require('../controllers/auth');
 
-
 const router=express.Router();
 
 router.get('/', authController.isLoggedIn, (req, res) => {
@@ -11,13 +10,6 @@ router.get('/', authController.isLoggedIn, (req, res) => {
       user: req.user
     });
   });
-  
- 
-
-
-
-
-
 
 
 router.get('/',(req,res)=>{
@@ -32,13 +24,5 @@ router.get('/login', (req, res) => {
 router.get('/register',(req,res)=>{
     res.render('register');
 });
-
-
-
-
-
-
-
-
 
 module.exports=router;
